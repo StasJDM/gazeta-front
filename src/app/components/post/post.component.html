@@ -1,0 +1,12 @@
+@if (post) {
+<div class="post-container">
+  <div class="post-author">
+    <div class="profile-block">
+      <img src="{{ post.channel.image }}" />
+      <div>{{ post.channel.title }}</div>
+    </div>
+    <div>{{ post.publishedAt | date : "short" }}</div>
+  </div>
+  <div class="post-block" [innerHTML]="post.content"></div>
+</div>
+}
